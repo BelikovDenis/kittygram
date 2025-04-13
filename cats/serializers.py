@@ -1,11 +1,9 @@
-# kittygram/cats/serializers.py
-from rest_framework import serializers
+# Обновлённый urls.py
+from django.urls import path
 
-from .models import Cat
+from cats.views import CatList, CatDetail
 
-
-class CatSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Cat
-        # В прошлом уроке fields = '__all__' изменили на:
-        fields = ('name', 'color', 'birth_year')
+urlpatterns = [
+    path('cats/', CatList.as_view()),
+    path('cats/<int:pk>/', CatDetail.as_view()),
+]

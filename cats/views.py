@@ -1,6 +1,3 @@
-# Обновлённый views.py
-from rest_framework import generics
-
 # views.py
 from rest_framework import viewsets 
 

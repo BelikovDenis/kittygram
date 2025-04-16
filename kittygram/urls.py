@@ -1,9 +1,3 @@
-# urls.py
-from django.urls import path
+from rest_framework.routers import SimpleRouter
 
-from cats.views import APICat
-
-
-urlpatterns = [
-    path('cats/', APICat.as_view()),
-]
+router = SimpleRouter()
